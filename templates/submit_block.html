@@ -1,0 +1,28 @@
+<html>
+   <body>
+     <h1> Blockchain Hash Challenge</h1>
+     <p>
+        We are constructing a simple block chain. To submit a new block, you must find the nonse string such that sha256(nonse + previous_hash) contains the appropriate number of zeros at the start of the string.
+        The number of zeros required controls the complexity of the challenge.
+     </p>
+
+     <h2> View Blockchain</h2>
+     <p>
+       View the block chain to find all current blocks in creation order. You can find the previous_hash by looking at the hash of the last created block.
+     </p>
+     <a href="http://localhost:5000/blockchain">
+    <button>View Blockchain</button>
+     </a>
+
+     <h2> Submit block</h2>
+     <p>
+        Use the provided validate function to find the appropriate nonse. Provide a unique miner name which will be hashed and added to the block, this will keep your identity secure.
+     </p>
+      <form action = "http://localhost:5000/blockchain" method = "POST">
+         <p>Name <input type = "text" name = "Name" /></p>
+         <p>Nonse <input type = "text" name = "Nonse" /></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+   </body>
+</html>

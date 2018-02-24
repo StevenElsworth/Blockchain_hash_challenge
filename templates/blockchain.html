@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+   <body>
+     <h1> View Blockchain</h1>
+     <p>
+       This is the current blockchain. The challenge started with just the Genesis block.
+     </p>
+    <table border = 1>
+   {% for i in result %}
+
+      <tr>
+         <th> {{i[0]}} </th> <th> {{i[1]}} </th> <th> {{i[2]}} </th>
+         </th>
+      </tr>
+
+   {% endfor %}
+  </table>
+
+    <h2> Leaderboard</h2>
+    <table border = 1>
+    {% for i in lead %}
+
+       <tr>
+          <th> {{i[0]}} </th> <th> {{i[1]}} </th>
+          </th>
+       </tr>
+
+    {% endfor %}
+    </table>
+
+    <h2>Submit Nonse</h2>
+    <a href="http://localhost:5000/">
+   <button>Submit Nonse</button>
+    </a>
+
+
+   </body>
+</html>
